@@ -8,7 +8,7 @@ cargo-bundle-licenses \
     --output THIRDPARTY.yml
 
 echo '[features]' >> cli/Cargo.toml
-echo 'use-system-gmp = "gmp-mpfr-sys/use-system-libs"' >> cli/Cargo.toml
+echo 'use-system-gmp = ["gmp-mpfr-sys/use-system-libs"]' >> cli/Cargo.toml
 
 # build statically linked binary with Rust
 cargo install --bins --no-track --locked --root ${PREFIX} --path cli --features use-system-gmp
