@@ -9,7 +9,7 @@ cargo-bundle-licenses \
 
 echo '[dependencies.gmp-mpfr-sys]' >> kalk/Cargo.toml
 echo 'version = "*"' >> kalk/Cargo.toml
-echo 'features = ["force-cross"]' >> kalk/Cargo.tml
+echo 'features = ["use-system-libs"]' >> kalk/Cargo.tml
 
 # build statically linked binary with Rust
 cargo install --bins --no-track --locked --root ${PREFIX} --path cli
